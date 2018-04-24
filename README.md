@@ -1,5 +1,13 @@
 # JavaSnippets
 
+#### Hello World
+    public class HelloWorld {
+        public static void main(String[] args) {
+            System.out.println("Hello World");
+        }
+    }
+
+
 #### If / Else
     if ( a > b ){
        out.println( a );
@@ -224,3 +232,31 @@ for ( String encoding : new String[] { "IBM437", "UTF-8", "ISO-8859-1" } )
 
 #### Converting String to date in Java
     java.util.Date = java.text.DateFormat.getDateInstance().parse(date String);
+or
+
+    SimpleDateFormat format = new SimpleDateFormat( "dd.MM.yyyy" );
+    Date date = format.parse( myString );
+    
+#### Converting Java util.Date to sql.Date
+    java.util.Date utilDate = new java.util.Date();
+    java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+    
+    
+    
+#### Scan file content
+    import java.io.*;
+    import java.util.*;
+
+    public class Scan {
+        public static void main(String[] args) throws FileNotFoundException {
+            Scanner scan = new Scanner(new File("file.txt"));
+            while (scan.hasNextLine() ) {
+                System.out.println(scan.nextLine() );
+            }
+        }
+    }
+    
+    
+    
+    
+    
