@@ -39,38 +39,30 @@
        out.println( i );
        }
 
-// F O R to step through each char of a String, left to right
+#### F O R to step through each char of a String, left to right
 // Avoids recomputing s.length. Avoids defining n outside the loop.
 // Note you must use a comma before n, not a semicolon.
 // You may not say int n= or final int n=.
-for ( int i=0,n=s.length(); i<n; i++ )
-   {
-   out.println( s.charAt( i ) );
-   }
+    for ( int i=0,n=s.length(); i<n; i++ )
+       {
+       out.println( s.charAt( i ) );
+       }
 
-// R E V E R S E   F O R  to countdown
-for ( int i=n-1; i>=0; i-- )
-   {
-   out.println( i );
-   }
+#### Reverse For Loop  
+##### to countdown
+    for ( int i=n-1; i>=0; i-- ){
+       out.println( i );
+       }
 
-// R E V E R S E   F O R  to step through each char of a String, right to left
-for ( int i=s.length()-1; i>=0; i-- )
-   {
-   out.println( s.charAt( i ) );
-   }
+#### Reverse For Loop to step through each char of a String, right to left
+    for ( int i=s.length()-1; i>=0; i-- ){
+       out.println( s.charAt( i ) );
+       }
 
-// D U A L   F O R
-// Note lack of; after j++
-for ( int i=0, j=0; i<n; i++,j++ )
-   {
-   out.println( i );
-   }
-// However, this is illegal!
-for ( int i=0, float r=1.0; i<n; i++,r=r*2.0 )
-   {
-   out.println( i );
-   }
+#### Double For
+    for ( int i=0, j=0; i<n; i++,j++ ){
+       out.println( i );
+       }
 
 // A R R A Y - S P A N N I N G   F O R
 String[] stuff = new String[ 10 ];
