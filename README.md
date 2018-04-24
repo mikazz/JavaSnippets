@@ -248,7 +248,35 @@ or
         }
     }
     
-##### Fibonacci
+    
+#### Factorial
+    import java.io.*;
+    import java.util.*;
+
+    public class Factorial {
+        public static void main(String[] args){
+            //System.out.println(factorial(10));
+            factorial(10);
+            }
+
+        public static int factorial(int number) {
+            int result = 1;
+            for (int factor = 2; factor <= number; factor++) {
+                result *= factor;
+            }
+            return result;
+        }
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+#### Fibonacci
     public class Fibonacci {
         public static void main(String[] args){
             //System.out.println(fibonacci(10));
@@ -261,6 +289,36 @@ or
         }
     }
 
+#### Palindrome
+    public class Palindrome {
+        public static void main(String[] args) {
+            //System.out.println(isPalindrome("DAAD"));
+            isPalindrome("DAAD");
+        }
+
+        public static boolean isPalindrome(String s) {
+            StringBuilder sb = new StringBuilder();
+            for (char c : s.toCharArray()) {
+                if (Character.isLetter(c)) {
+                    sb.append(c);
+                }
+            }
+            String forward = sb.toString().toLowerCase();
+            String backward = sb.reverse().toString().toLowerCase();
+            return forward.equals(backward);
+        }
+    }
     
-    
+#### Reverse String
+    public class ReverseString {
+        public static void main(String[] args) {
+		    System.out.println(reverseString("Hello World"));
+		    reverseString("Hello World");
+    }
+
+    public static String reverseString(String s) {
+        return new StringBuilder(s).reverse().toString();
+    }
+}
+
     
