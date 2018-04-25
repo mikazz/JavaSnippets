@@ -250,13 +250,10 @@ or
     
     
 #### Factorial
-    import java.io.*;
-    import java.util.*;
-
     public class Factorial {
         public static void main(String[] args){
-            //System.out.println(factorial(10));
-            factorial(10);
+            // factorial(10);
+			System.out.println(factorial(10));
             }
 
         public static int factorial(int number) {
@@ -279,8 +276,8 @@ or
 #### Fibonacci
     public class Fibonacci {
         public static void main(String[] args){
-            //System.out.println(fibonacci(10));
-            fibonacci(10);
+            // fibonacci(10);
+			System.out.println(fibonacci(10));
             }
 
         public static int fibonacci(int n) {
@@ -289,11 +286,48 @@ or
         }
     }
 
+#### FizzBuzz
+	public class FizzBuzz {
+		public static void main(String[] args) {
+			for (int i = 1; i <= 100; i++) {
+				if (i % 15 == 0) {
+					System.out.println("FizzBuzz");
+				} else if (i % 3 == 0) {
+					System.out.println("Fizz");
+				} else if (i % 5 == 0) {
+					System.out.println("Buzz");
+				} else {
+					System.out.println(String.valueOf(i));
+				}
+			}
+		}
+	}
+
+#### HTTP Get
+	import java.io.IOException;
+	import java.net.HttpURLConnection;
+	import java.net.URL;
+
+	public class Test {
+
+		public static void main(String[] args) throws IOException{
+
+			URL oracle = new URL("http://www.oracle.com/");		
+			// httpGet(oracle);
+			System.out.println(httpGet(oracle));
+			}
+
+		public static int httpGet(URL address) throws IOException {
+			HttpURLConnection con = (HttpURLConnection) address.openConnection();
+			return con.getResponseCode();
+		}
+	}
+
 #### Palindrome
     public class Palindrome {
         public static void main(String[] args) {
-            //System.out.println(isPalindrome("DAAD"));
-            isPalindrome("DAAD");
+            // isPalindrome("DAAD");
+			System.out.println(isPalindrome("DAAD"));
         }
 
         public static boolean isPalindrome(String s) {
@@ -312,13 +346,13 @@ or
 #### Reverse String
     public class ReverseString {
         public static void main(String[] args) {
+			// reverseString("Hello World");
 		    System.out.println(reverseString("Hello World"));
-		    reverseString("Hello World");
     }
 
     public static String reverseString(String s) {
         return new StringBuilder(s).reverse().toString();
-    }
-}
+    	}
+	}
 
     
