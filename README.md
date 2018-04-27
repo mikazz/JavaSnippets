@@ -251,8 +251,24 @@ or
     java.util.Date utilDate = new java.util.Date();
     java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
     
-    
-    
+
+
+#### Print File Content
+	import java.nio.file.Files;
+	import java.nio.file.Path;
+	import java.nio.file.Paths;
+	import java.util.Arrays;
+
+	public class PrintFileContent{
+		public static void main(String args[]) throws Exception{
+
+		Path filePath = Paths.get("file.txt");
+		byte[] data = Files.readAllBytes(filePath);
+		String Lines = new String(data);
+		System.out.println(Lines);
+	    }
+	}
+
 #### Scan file content
     import java.io.*;
     import java.util.*;
