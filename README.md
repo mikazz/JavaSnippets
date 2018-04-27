@@ -339,9 +339,9 @@ or
 					System.out.println("Buzz");
 				} else {
 					System.out.println(String.valueOf(i));
-	            }
-	        }
-	    }
+				}
+			}
+		}
 	}
 
 #### HTTP Get
@@ -349,51 +349,52 @@ or
 	import java.net.HttpURLConnection;
 	import java.net.URL;
 
-	public class Test {
-
+	public class HTTPget {
 		public static void main(String[] args) throws IOException{
 
-			URL oracle = new URL("http://www.oracle.com/");		
-			// httpGet(oracle);
-			System.out.println(httpGet(oracle));
-			}
+		URL oracle = new URL("http://www.oracle.com/");     
+		// httpGet(oracle);
+		System.out.println(httpGet(oracle));
+		}
 
 		public static int httpGet(URL address) throws IOException {
-			HttpURLConnection con = (HttpURLConnection) address.openConnection();
-			return con.getResponseCode();
-	    }
+		HttpURLConnection con = (HttpURLConnection) address.openConnection();
+		return con.getResponseCode();
+		}
 	}
 
-#### Palindrome
-    public class Palindrome {
-        public static void main(String[] args) {
-            // isPalindrome("DAAD");
-			System.out.println(isPalindrome("DAAD"));
-        }
 
-        public static boolean isPalindrome(String s) {
-            StringBuilder sb = new StringBuilder();
-            for (char c : s.toCharArray()) {
-                if (Character.isLetter(c)) {
-                    sb.append(c);
-                }
-            }
-            String forward = sb.toString().toLowerCase();
-            String backward = sb.reverse().toString().toLowerCase();
-            return forward.equals(backward);
-        }
-    }
+#### Palindrome
+	public class Palindrome {
+		public static void main(String[] args) {
+			// isPalindrome("DAAD");
+			System.out.println(isPalindrome("DAAD"));
+		}
+
+		public static boolean isPalindrome(String s) {
+			StringBuilder sb = new StringBuilder();
+			for (char c : s.toCharArray()) {
+				if (Character.isLetter(c)) {
+					sb.append(c);
+				}
+			}
+			String forward = sb.toString().toLowerCase();
+			String backward = sb.reverse().toString().toLowerCase();
+			return forward.equals(backward);
+		}
+	}
+
     
 #### Reverse String
-    public class ReverseString {
-        public static void main(String[] args) {
-	    // reverseString("Hello World");
-	    System.out.println(reverseString("Hello World"));
-    }
+	public class ReverseString {
+		public static void main(String[] args) {
+			// reverseString("Hello World");
+			System.out.println(reverseString("Hello World"));
+	}
 
-    public static String reverseString(String s) {
-        return new StringBuilder(s).reverse().toString();
-        }
+		public static String reverseString(String s) {
+			return new StringBuilder(s).reverse().toString();
+		}
 	}
 
     
