@@ -307,9 +307,9 @@ or
 					System.out.println("Buzz");
 				} else {
 					System.out.println(String.valueOf(i));
-				}
-			}
-		}
+	            }
+	        }
+	    }
 	}
 
 #### HTTP Get
@@ -329,7 +329,7 @@ or
 		public static int httpGet(URL address) throws IOException {
 			HttpURLConnection con = (HttpURLConnection) address.openConnection();
 			return con.getResponseCode();
-		}
+	    }
 	}
 
 #### Palindrome
@@ -361,7 +361,7 @@ or
 
     public static String reverseString(String s) {
         return new StringBuilder(s).reverse().toString();
-    	}
+        }
 	}
 
     
