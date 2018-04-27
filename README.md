@@ -218,6 +218,25 @@ for ( String encoding : new String[] { "IBM437", "UTF-8", "ISO-8859-1" } )
     }
 // -30-
 
+#### Throw Exception 
+	public class ThrowException {
+		public static void main(String[] args) {
+			System.out.println(divide(4, 0));
+			if (args.length > 1) {
+				// Convert a string to an integer
+				int arg0 = Integer.parseInt(args[0]);
+				int arg1 = Integer.parseInt(args[1]);
+				System.out.println(divide(arg0, arg1));
+			}
+		}
+		public static int divide(int a, int b) {
+			if (b == 0) {
+				throw new ArithmeticException("You can\'t divide by zero!");
+			} else {
+				return a / b;
+			}
+		}
+	}
 
 #### Try/Catch/Throw
     public class Test extends StandardTest{
@@ -248,9 +267,6 @@ or
     Date date = format.parse( myString );
     
 #### Converting Java util.Date to sql.Date
-    java.util.Date utilDate = new java.util.Date();
-    java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
-    
 
 
 #### Print File Content
