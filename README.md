@@ -35,21 +35,26 @@
        
 #### For Loop
 ##### When you know the maximum number of times to iterate in advance.
-    for ( int i=0; i<n; i++ ){
-       out.println( i );
-       }
+	class ForLoop {
+		public static void main(String[] args){
+			int n = 10;
+			for(int i=1; i<n; i++){
+				System.out.println("Count is: " + i);
+			}
+		}
+	}
 
-#### F O R to step through each char of a String, left to right
-// Avoids recomputing s.length. Avoids defining n outside the loop.
-// Note you must use a comma before n, not a semicolon.
-// You may not say int n= or final int n=.
-    for ( int i=0,n=s.length(); i<n; i++ )
-       {
-       out.println( s.charAt( i ) );
-       }
+#### For Loop to step through each char of a String, left to right
+	class ForLoopString {
+		public static void main(String[] args){
+			String s = "Hello World";
+			for ( int i=0,n=s.length(); i<n; i++ ){
+				System.out.println( s.charAt( i ) );
+			}
+		}
+	}
 
-#### Reverse For Loop  
-##### to countdown
+#### Reverse For Loop countdown
     for ( int i=n-1; i>=0; i-- ){
        out.println( i );
        }
@@ -63,6 +68,19 @@
     for ( int i=0, j=0; i<n; i++,j++ ){
        out.println( i );
        }
+
+#### For each Loop - iterate over array
+	class ForEach {
+		public static void main(String[] args){
+			int[] array = {1, 9, 9, 5};
+			for (int i = 0; i < array.length; i++) {
+				int element = array[i];
+				System.out.println(element);
+			}
+		}
+	}
+
+
 
 // A R R A Y - S P A N N I N G   F O R
 String[] stuff = new String[ 10 ];
@@ -248,7 +266,6 @@ or
         }
     }
     
-    
 #### Factorial
     public class Factorial {
         public static void main(String[] args){
@@ -265,14 +282,6 @@ or
         }
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
 #### Fibonacci
     public class Fibonacci {
         public static void main(String[] args){
