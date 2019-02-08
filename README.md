@@ -10,9 +10,6 @@
 
 
 ## List Operations
-    import java.util.List;
-    import java.util.ArrayList;
-
     public class Main {
 
         public static void main(String[] args) {
@@ -60,6 +57,14 @@
 
             // Get whole list
             System.out.println(list);
+
+            // Apply function toUpperCase to each List element
+            list.replaceAll(String::toUpperCase);
+            System.out.println(list);
+
+            // Create a new list instance of lowered case elements
+            List<String> lower_list = list.stream().map(String::toLowerCase).collect(Collectors.toList());
+            System.out.println(lower_list);
         }
     }
 
