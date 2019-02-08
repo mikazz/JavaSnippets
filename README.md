@@ -1,12 +1,31 @@
 # JavaSnippets
 
 
-## Hello World
+# Basic
+
+
+## Converting int to String and Strings to int
+    String a = String.valueOf(2); //integer to numeric string
+    int i = Integer.parseInt(a);  //numeric string to an int
+
+
+## Converting String to date in Java
+    java.util.Date = java.text.DateFormat.getDateInstance().parse(date String);
+or
+
+    SimpleDateFormat format = new SimpleDateFormat( "dd.MM.yyyy" );
+    Date date = format.parse( myString );
+
+
+# Hello World
     public class HelloWorld {
         public static void main(String[] args) {
             System.out.println("Hello World");
         }
     }
+
+
+# Lists
 
 
 ## List Operations
@@ -281,7 +300,26 @@ for ( String encoding : new String[] { "IBM437", "UTF-8", "ISO-8859-1" } )
     }
 // -30-
 
-#### Throw Exception 
+# Exceptions
+
+## Try / Catch
+
+class Main{
+    public static void main(String args[]){
+        System.out.println("Hello, World. Lets Start");
+
+        try{
+            int a = 10;
+            int b = a / 0;
+        }
+        catch(ArithmeticException e){
+            System.out.println("Warning: ArithmeticException");
+        }
+        System.out.println("Out of try-catch block");
+    }
+}
+
+## Throw Exception 
 	public class ThrowException {
 		public static void main(String[] args) {
 			System.out.println(divide(4, 0));
@@ -316,18 +354,6 @@ for ( String encoding : new String[] { "IBM437", "UTF-8", "ISO-8859-1" } )
           if ( unexpected() ) throw new StrangeException ( "oh oh" );
        } // end dangerMethod
        } // end class Test
-
-
-#### Converting int to String and Strings to int
-    String a = String.valueOf(2); //integer to numeric string
-    int i = Integer.parseInt(a);  //numeric string to an int
-
-#### Converting String to date in Java
-    java.util.Date = java.text.DateFormat.getDateInstance().parse(date String);
-or
-
-    SimpleDateFormat format = new SimpleDateFormat( "dd.MM.yyyy" );
-    Date date = format.parse( myString );
     
 #### Converting Java util.Date to sql.Date
 
