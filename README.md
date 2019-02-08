@@ -1,11 +1,69 @@
 # JavaSnippets
 
-#### Hello World
+
+## Hello World
     public class HelloWorld {
         public static void main(String[] args) {
             System.out.println("Hello World");
         }
     }
+
+
+## List Operations
+    import java.util.List;
+    import java.util.ArrayList;
+
+    public class Main {
+
+        public static void main(String[] args) {
+            System.out.println("Hello, World. Lets Start");
+
+            // Initialise list of String(s)
+            List<String> list = new ArrayList<>();
+
+            // Add String elements to list
+            list.add("Johny");
+            list.add("Steve");
+            list.add("Barry");
+            list.add("Harry");
+            list.add("Barry");
+
+            // We can't add Int to a List of String
+            //list.add(1);
+
+            // And the same goes for Double
+            //list.add(1.55)
+
+            // Get whole list
+            System.out.println(list);
+
+            // Get the first list element
+            String first_list_element = list.get(0);
+            System.out.println("First element is: " + first_list_element);
+
+            // Get the second list element
+            String second_list_element = list.get(1);
+            System.out.println("Second element is: " + second_list_element);
+
+            // Check list size
+            System.out.println("List size is: " + list.size());
+
+            // Remove only the first occurrence of Object Barry
+            System.out.println("\nRemoving the first occurrence of Barry");
+            list.remove("Barry");
+            System.out.println("List size is: " + list.size());
+
+            // Remove element (now Johny) by its index (position) 0 = first
+            System.out.println("\nRemoving element by index 0");
+            System.out.println(list);
+            list.remove(0);
+
+            // Get whole list
+            System.out.println(list);
+        }
+    }
+
+
 
 
 #### If / Else
