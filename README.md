@@ -226,7 +226,7 @@ public class Main {
 import java.io.*;
 import java.util.*;
 
-public class Scan {
+public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scan = new Scanner(new File("file.txt"));
         while (scan.hasNextLine() ) {
@@ -239,7 +239,7 @@ public class Scan {
 
 ## Factorial
 ```java
-public class Factorial {
+public class Main {
     public static void main(String[] args){
         // factorial(10);
         System.out.println(factorial(10));
@@ -258,7 +258,7 @@ public class Factorial {
 
 ## Fibonacci
 ```java
-public class Fibonacci {
+public class Main {
     public static void main(String[] args){
         // fibonacci(10);
         System.out.println(fibonacci(10));
@@ -274,7 +274,7 @@ public class Fibonacci {
 
 ## FizzBuzz
 ```java
-public class FizzBuzz {
+public class Main {
     public static void main(String[] args) {
         for (int i = 1; i <= 100; i++) {
             if (i % 15 == 0) {
@@ -298,17 +298,17 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class HTTPget {
+public class Main {
     public static void main(String[] args) throws IOException{
 
-    URL oracle = new URL("http://www.oracle.com/");     
-    // httpGet(oracle);
-    System.out.println(httpGet(oracle));
+        URL oracle = new URL("http://www.oracle.com/");
+        // httpGet(oracle);
+        System.out.println(httpGet(oracle));
     }
 
     public static int httpGet(URL address) throws IOException {
-    HttpURLConnection con = (HttpURLConnection) address.openConnection();
-    return con.getResponseCode();
+        HttpURLConnection con = (HttpURLConnection) address.openConnection();
+        return con.getResponseCode();
     }
 }
 ```
@@ -316,7 +316,7 @@ public class HTTPget {
 
 ## Palindrome
 ```java
-public class Palindrome {
+public class Main {
     public static void main(String[] args) {
         // isPalindrome("DAAD");
         System.out.println(isPalindrome("DAAD"));
@@ -339,7 +339,7 @@ public class Palindrome {
 
 ## Reverse String
 ```java
-public class ReverseString {
+public class Main {
     public static void main(String[] args) {
         // reverseString("Hello World");
         System.out.println(reverseString("Hello World"));
