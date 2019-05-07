@@ -117,24 +117,24 @@ or
        
 #### For Loop
 ##### When you know the maximum number of times to iterate in advance.
-	class ForLoop {
-		public static void main(String[] args){
-			int n = 10;
-			for(int i=1; i<n; i++){
-				System.out.println("Count is: " + i);
-			}
-		}
-	}
+    class ForLoop {
+        public static void main(String[] args){
+            int n = 10;
+            for(int i=1; i<n; i++){
+                System.out.println("Count is: " + i);
+            }
+        }
+    }
 
 #### For Loop to step through each char of a String, left to right
-	class ForLoopString {
-		public static void main(String[] args){
-			String s = "Hello World";
-			for ( int i=0,n=s.length(); i<n; i++ ){
-				System.out.println( s.charAt( i ) );
-			}
-		}
-	}
+    class ForLoopString {
+        public static void main(String[] args){
+            String s = "Hello World";
+            for ( int i=0,n=s.length(); i<n; i++ ){
+                System.out.println( s.charAt( i ) );
+            }
+        }
+    }
 
 #### Reverse For Loop countdown
     for ( int i=n-1; i>=0; i-- ){
@@ -152,15 +152,15 @@ or
        }
 
 #### For each Loop - iterate over array
-	class ForEach {
-		public static void main(String[] args){
-			int[] array = {1, 9, 9, 5};
-			for (int i = 0; i < array.length; i++) {
-				int element = array[i];
-				System.out.println(element);
-			}
-		}
-	}
+    class ForEach {
+        public static void main(String[] args){
+            int[] array = {1, 9, 9, 5};
+            for (int i = 0; i < array.length; i++) {
+                int element = array[i];
+                System.out.println(element);
+            }
+        }
+    }
 
 
 
@@ -320,24 +320,24 @@ class Main{
 }
 
 ## Throw Exception 
-	public class ThrowException {
-		public static void main(String[] args) {
-			System.out.println(divide(4, 0));
-			if (args.length > 1) {
-				// Convert a string to an integer
-				int arg0 = Integer.parseInt(args[0]);
-				int arg1 = Integer.parseInt(args[1]);
-				System.out.println(divide(arg0, arg1));
-			}
-		}
-		public static int divide(int a, int b) {
-			if (b == 0) {
-				throw new ArithmeticException("You can\'t divide by zero!");
-			} else {
-				return a / b;
-			}
-		}
-	}
+    public class ThrowException {
+        public static void main(String[] args) {
+            System.out.println(divide(4, 0));
+            if (args.length > 1) {
+                // Convert a string to an integer
+                int arg0 = Integer.parseInt(args[0]);
+                int arg1 = Integer.parseInt(args[1]);
+                System.out.println(divide(arg0, arg1));
+            }
+        }
+        public static int divide(int a, int b) {
+            if (b == 0) {
+                throw new ArithmeticException("You can\'t divide by zero!");
+            } else {
+                return a / b;
+            }
+        }
+    }
 
 #### Try/Catch/Throw
     public class Test extends StandardTest{
@@ -359,20 +359,20 @@ class Main{
 
 
 #### Print File Content
-	import java.nio.file.Files;
-	import java.nio.file.Path;
-	import java.nio.file.Paths;
-	import java.util.Arrays;
+    import java.nio.file.Files;
+    import java.nio.file.Path;
+    import java.nio.file.Paths;
+    import java.util.Arrays;
 
-	public class PrintFileContent{
-		public static void main(String args[]) throws Exception{
+    public class PrintFileContent{
+        public static void main(String args[]) throws Exception{
 
-		Path filePath = Paths.get("file.txt");
-		byte[] data = Files.readAllBytes(filePath);
-		String Lines = new String(data);
-		System.out.println(Lines);
-	    }
-	}
+        Path filePath = Paths.get("file.txt");
+        byte[] data = Files.readAllBytes(filePath);
+        String Lines = new String(data);
+        System.out.println(Lines);
+        }
+    }
 
 #### Scan file content
     import java.io.*;
@@ -391,7 +391,7 @@ class Main{
     public class Factorial {
         public static void main(String[] args){
             // factorial(10);
-			System.out.println(factorial(10));
+            System.out.println(factorial(10));
             }
 
         public static int factorial(int number) {
@@ -407,7 +407,7 @@ class Main{
     public class Fibonacci {
         public static void main(String[] args){
             // fibonacci(10);
-			System.out.println(fibonacci(10));
+            System.out.println(fibonacci(10));
             }
 
         public static int fibonacci(int n) {
@@ -417,74 +417,77 @@ class Main{
     }
 
 #### FizzBuzz
-	public class FizzBuzz {
-		public static void main(String[] args) {
-			for (int i = 1; i <= 100; i++) {
-				if (i % 15 == 0) {
-					System.out.println("FizzBuzz");
-				} else if (i % 3 == 0) {
-					System.out.println("Fizz");
-				} else if (i % 5 == 0) {
-					System.out.println("Buzz");
-				} else {
-					System.out.println(String.valueOf(i));
-				}
-			}
-		}
-	}
+    public class FizzBuzz {
+        public static void main(String[] args) {
+            for (int i = 1; i <= 100; i++) {
+                if (i % 15 == 0) {
+                    System.out.println("FizzBuzz");
+                } else if (i % 3 == 0) {
+                    System.out.println("Fizz");
+                } else if (i % 5 == 0) {
+                    System.out.println("Buzz");
+                } else {
+                    System.out.println(String.valueOf(i));
+                }
+            }
+        }
+    }
 
-#### HTTP Get
-	import java.io.IOException;
-	import java.net.HttpURLConnection;
-	import java.net.URL;
+## HTTP Get
+```java
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
-	public class HTTPget {
-		public static void main(String[] args) throws IOException{
+public class HTTPget {
+    public static void main(String[] args) throws IOException{
 
-		URL oracle = new URL("http://www.oracle.com/");     
-		// httpGet(oracle);
-		System.out.println(httpGet(oracle));
-		}
+    URL oracle = new URL("http://www.oracle.com/");     
+    // httpGet(oracle);
+    System.out.println(httpGet(oracle));
+    }
 
-		public static int httpGet(URL address) throws IOException {
-		HttpURLConnection con = (HttpURLConnection) address.openConnection();
-		return con.getResponseCode();
-		}
-	}
-
-
-#### Palindrome
-	public class Palindrome {
-		public static void main(String[] args) {
-			// isPalindrome("DAAD");
-			System.out.println(isPalindrome("DAAD"));
-		}
-
-		public static boolean isPalindrome(String s) {
-			StringBuilder sb = new StringBuilder();
-			for (char c : s.toCharArray()) {
-				if (Character.isLetter(c)) {
-					sb.append(c);
-				}
-			}
-			String forward = sb.toString().toLowerCase();
-			String backward = sb.reverse().toString().toLowerCase();
-			return forward.equals(backward);
-		}
-	}
+    public static int httpGet(URL address) throws IOException {
+    HttpURLConnection con = (HttpURLConnection) address.openConnection();
+    return con.getResponseCode();
+    }
+}
+```
 
 
-    
-#### Reverse String
-	public class ReverseString {
-		public static void main(String[] args) {
-			// reverseString("Hello World");
-			System.out.println(reverseString("Hello World"));
-	}
+## Palindrome
+```java
+public class Palindrome {
+    public static void main(String[] args) {
+        // isPalindrome("DAAD");
+        System.out.println(isPalindrome("DAAD"));
+    }
 
-		public static String reverseString(String s) {
-			return new StringBuilder(s).reverse().toString();
-		}
-	}
+    public static boolean isPalindrome(String s) {
+        StringBuilder sb = new StringBuilder();
+        for (char c : s.toCharArray()) {
+            if (Character.isLetter(c)) {
+                sb.append(c);
+            }
+        }
+        String forward = sb.toString().toLowerCase();
+        String backward = sb.reverse().toString().toLowerCase();
+        return forward.equals(backward);
+    }
+}
+```
 
-    
+
+## Reverse String
+```java
+public class ReverseString {
+    public static void main(String[] args) {
+        // reverseString("Hello World");
+        System.out.println(reverseString("Hello World"));
+}
+
+    public static String reverseString(String s) {
+        return new StringBuilder(s).reverse().toString();
+    }
+}
+```
